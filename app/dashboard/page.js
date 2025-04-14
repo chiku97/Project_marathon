@@ -1,4 +1,7 @@
 import "./page.css"
+import Button from "./components/Button"
+import Description from "./components/Description"
+import Header from "./components/Header"
 
 // Simple icons as React components
 const Globe = () => (
@@ -59,7 +62,7 @@ function Dashboard() {
       id: "wap",
       title: "Web Application Programming (WAP)",
       description: "Test your knowledge of web technologies, HTML, CSS, and JavaScript.",
-      icon: <Globe />,
+      icon: <Globe/> ,
       colorClass: "wap-category",
     },
     {
@@ -87,24 +90,27 @@ function Dashboard() {
         {quizCategories.map((category) => (
           <div key={category.id} className={`quiz-card`}>
             {/* First div - Icon with colored background */}
-            <div className="card-header" style={{backgroundColor:category.colorClass}}>
+            {/* <div className={`card-header ${category.colorClass}`}>
               <div className="icon-title">
                 <span className="icon">{category.icon}</span>
                 <h2 className="category-title">{category.title}</h2>
               </div>
-            </div>
+            </div> */}
+            <Header category={category}/>
 
             {/* Second div - Description paragraph */}
-            <div className="card-body">
+            {/* <div className="card-body">
               <p className="category-description">{category.description}</p>
-            </div>
+            </div> */}
+            <Description category={category}/>
 
             {/* Third div - Button */}
-            <div className="card-footer">
+            {/* <div className="card-footer">
               <a  className="start-button">
                 Start Quiz
               </a>
-            </div>
+            </div> */}
+            <Button/>
           </div>
         ))}
       </div>

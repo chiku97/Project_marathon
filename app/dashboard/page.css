@@ -13,63 +13,62 @@
   }
   
   .container {
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 48px 16px;
+    padding: 20px;
+    text-align: center;
   }
   
   /* Header styles */
   .main-title {
     font-size: 2.5rem;
     font-weight: bold;
-    text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   
   .subtitle {
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     color: #666;
-    text-align: center;
-    margin-bottom: 48px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 30px;
   }
   
   /* Grid layout */
   .quiz-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  
-  @media (min-width: 768px) {
-    .quiz-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
   }
   
   /* Card styles */
   .quiz-card {
+    background-color: #fff;
     border-radius: 8px;
-    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   }
   
   /* Category specific colors */
   .wap-category {
-    background-color: #eff6ff; /* light blue */
+    background-color: #dbeafe; /* Light blue */
   }
   
   .wap-category .icon,
   .wap-category .category-title {
     color: #2563eb; /* blue */
+    align-items: center;
   }
   
   .psp-category {
-    background-color: #ecfdf5; /* light green */
+    background-color: #d1fae5; /* Light green */
   }
   
   .psp-category .icon,
@@ -78,7 +77,7 @@
   }
   
   .dsa-category {
-    background-color: #f5f3ff; /* light purple */
+    background-color: #ede9fe; /* Light purple */
   }
   
   .dsa-category .icon,
@@ -88,54 +87,54 @@
   
   /* Card sections */
   .card-header {
-    padding: 24px 24px 12px 24px;
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Ensures the content is horizontally centered */
   }
   
   .icon-title {
     display: flex;
-    align-items: center;
+    align-items: center; /* Vertically aligns the icon and title */
+    gap: 10px; /* Adds spacing between the icon and title */
   }
   
   .icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
+    font-size: 2rem;
   }
   
   .category-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-left: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
   }
   
   .card-body {
-    padding: 0 24px;
-    flex-grow: 1;
-  }
-  
-  .category-description {
-    color: #4b5563;
+    padding: 20px;
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
   }
   
   .card-footer {
-    padding: 24px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
   }
   
   .start-button {
-    display: block;
-    background-color: #111;
-    color: white;
-    padding: 12px 16px;
-    border-radius: 4px;
-    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.2s;
+    border-radius: 4px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
   }
   
   .start-button:hover {
-    background-color: #333;
+    background-color: #444;
   }
-  
