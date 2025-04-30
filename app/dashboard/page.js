@@ -89,27 +89,13 @@ function Dashboard() {
       <div className="quiz-grid">
         {quizCategories.map((category) => (
           <div key={category.id} className={`quiz-card`}>
-            {/* First div - Icon with colored background */}
-            {/* <div className={`card-header ${category.colorClass}`}>
-              <div className="icon-title">
-                <span className="icon">{category.icon}</span>
-                <h2 className="category-title">{category.title}</h2>
-              </div>
-            </div> */}
+           
             <Header category={category}/>
 
-            {/* Second div - Description paragraph */}
-            {/* <div className="card-body">
-              <p className="category-description">{category.description}</p>
-            </div> */}
+           
             <Description category={category}/>
 
-            {/* Third div - Button */}
-            {/* <div className="card-footer">
-              <a  className="start-button">
-                Start Quiz
-              </a>
-            </div> */}
+  
             <Button/>
           </div>
         ))}
