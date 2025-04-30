@@ -1,7 +1,7 @@
 import "./page.css"
-import Button from "./components/Button"
-import Description from "./components/Description"
-import Header from "./components/Header"
+import Button from "../../components/Button"
+import Description from "../../components/Description"
+import Header from "../../components/Header"
 
 // Simple icons as React components
 const Globe = () => (
